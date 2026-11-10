@@ -15,7 +15,15 @@ watch(
   [isLoading, () => progress.percentage],
   ([loading, value]) => {
     modelLoading.value = loading;
-    modelProgress.value = value;
+
+    if (!loading) {
+      modelProgress.value = 100;
+      return;
+    }
+
+    if (Number.isFinite(value)) {
+      modelProgress.value = THREE.MathUtils.clamp(value, 0, 100);
+    }
   },
   { immediate: true },
 );
