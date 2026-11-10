@@ -1,0 +1,80 @@
+{
+  "audio": {
+    "welcome": {
+      "label": "Mark VII",
+      "title": "Enter the experience.",
+      "description": "Headphones recommended. Turn on audio for a more immersive experience.",
+      "enable": "Enable Audio",
+      "continue": "Continue without audio"
+    },
+    "on": "Audio On",
+    "off": "Audio Off"
+  },
+
+  "loading": {
+    "title": "Loading Mark VII..."
+  },
+
+  "review": {
+    "intro": {
+      "title": "Introduction Mark VII",
+      "description": "The Mark VII is Tony Stark's seventh Iron Man armor. Built for heavy combat, it features a fully automated deployment system that allows Tony to summon and assemble the suit in seconds."
+    },
+    "helmet": {
+      "title": "Helmet & HUD",
+      "description": "The helmet houses Tony's heads-up display, advanced targeting system, and onboard diagnostics. Its sensors provide real-time tactical data, helping him identify threats and navigate combat situations."
+    },
+    "chest": {
+      "title": "Arc Reactor",
+      "description": "The triangular chest-mounted arc reactor supplies power to the armor. It is the core of Tony's technology, supporting the suit's flight systems, weapons, and life-support functions."
+    },
+    "hand": {
+      "title": "Repulsors",
+      "description": "Integrated into the palms, repulsors fire concentrated energy blasts capable of striking targets with precision. They also provide directional thrust, allowing Tony to maneuver during flight."
+    },
+    "boots": {
+      "title": "Boot Thrusters",
+      "description": "Powerful thrusters built into the boots generate the thrust needed for flight. Combined with the hand repulsors, they allow Tony to accelerate, hover, and control his direction in mid-air."
+    },
+    "ergonomic": {
+      "title": "Armor Design",
+      "description": "The Mark VII uses a complex assembly of interlocking armor plates and mechanical components. Its articulated construction protects Tony while preserving the mobility needed for close-quarters combat and flight."
+    },
+    "summary": {
+      "title": "Mark VII",
+      "description": "The Iron Man Mark VII combines advanced engineering, powerful repulsor technology, a high-output arc reactor, and an autonomous flight system. Its modular armor and rapid deployment technology make it one of Tony Stark's most versatile combat suits, balancing protection, mobility, and offensive power."
+    }
+  },
+
+  "header": {
+    "company": "STARK INDUSTRIES",
+    "division": "ADVANCED TECHNOLOGY DIVISION",
+    "armor": "IRON MAN ARMOR",
+    "database": "ARMOR DATABASE"
+  },
+
+  "footer": {
+    "label": "Iron Man — Mark VII",
+    "title": "The next evolution",
+    "titleHighlight": "of armor technology.",
+    "description": "A closer look at Tony Stark's Mark VII — exploring its engineering, design, weapon systems, and advanced flight capabilities.",
+
+    "project": {
+      "label": "Project",
+      "description": "An interactive 3D experience dedicated to one of the most iconic Iron Man armors from Marvel's The Avengers (2012)."
+    },
+
+    "technologies": {
+      "label": "Technologies",
+      "value": "Nuxt · Three.js · TresJS · GSAP · Blender · Tailwind"
+    },
+
+    "credits": {
+      "label": "Credits",
+      "description": "3D model and visual assets belong to their respective creators. Iron Man and related characters are trademarks and property of Marvel and their respective owners."
+    },
+
+    "copyright": "© 2026 — Personal 3D Web Experience",
+    "tagline": "Built for the love of 3D, animation, and web development."
+  }
+}
