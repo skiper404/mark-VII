@@ -17,7 +17,8 @@ useSeoMeta({
   twitterCard: "summary_large_image",
 });
 
-const { hasFinishLoading, progress } = await useProgress();
+const modelLoading = useState("mark7-loading", () => true);
+const modelProgress = useState("mark7-progress", () => 0);
 
 const { init: introInit, destroy: introDestroy } = useIntroAnimation();
 const { init: reviewInit, destroy: reviewDestroy } = useReviewAnimation();
@@ -36,7 +37,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="font-asimovian">
     <Header />
-    <LoadingScreen v-if="!hasFinishLoading" :progress="progress" />
+    <LoadingScreen v-if="modelLoading" :progress="modelProgress" />
 
     <Canvas />
 

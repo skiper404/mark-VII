@@ -1,8 +1,24 @@
 <script setup lang="ts">
 import * as THREE from "three";
 import { useTresContext, type TresCamera } from "@tresjs/core";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-const { state } = useGLTF("/models/mark7.glb");
+const { state, progress, isLoading } = useLoader(
+  GLTFLoader,
+  "/models/mark7.glb",
+);
+
+const modelLoading = useState("mark7-loading", () => true);
+const modelProgress = useState("mark7-progress", () => 0);
+
+watch(
+  [isLoading, () => progress.percentage],
+  ([loading, value]) => {
+    modelLoading.value = loading;
+    modelProgress.value = value;
+  },
+  { immediate: true },
+);
 
 const { camera: cameraManager } = useTresContext();
 
