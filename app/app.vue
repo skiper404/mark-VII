@@ -17,8 +17,8 @@ useSeoMeta({
   twitterCard: "summary_large_image",
 });
 
-const modelLoading = useState("mark7-loading", () => true);
-const modelProgress = useState("mark7-progress", () => 0);
+const modelLoading = useState("markVII-loading", () => true);
+const modelProgress = useState("markVII-progress", () => 0);
 
 const { init: introInit, destroy: introDestroy } = useIntroAnimation();
 const { init: reviewInit, destroy: reviewDestroy } = useReviewAnimation();

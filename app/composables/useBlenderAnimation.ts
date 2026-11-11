@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export const useBlenderAnimation = (ironmanRef: any) => {
+export const useBlenderAnimation = (markVIIRef: any) => {
   const progress = { value: 0 };
 
   let blenderTween: gsap.core.Tween | null = null;
@@ -18,7 +18,7 @@ export const useBlenderAnimation = (ironmanRef: any) => {
         scrub: 1,
       },
       onUpdate: () => {
-        ironmanRef.value?.setProgress(progress.value);
+        markVIIRef.value?.setProgress(progress.value);
       },
     });
   };

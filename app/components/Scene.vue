@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import Ironman from "./Ironman.vue";
+import MarkVII from "./MarkVII.vue";
 
-const ironmanRef = ref<InstanceType<typeof Ironman> | null>(null);
+const markVIIRef = ref<InstanceType<typeof MarkVII> | null>(null);
 
 let destroyCameraAnimation: (() => void) | null = null;
 let destroyBlenderAnimation: (() => void) | null = null;
 
 watchEffect(() => {
-  const camera = ironmanRef.value?.getCamera();
-  const target = ironmanRef.value?.getCameraTarget();
+  const camera = markVIIRef.value?.getCamera();
+  const target = markVIIRef.value?.getCameraTarget();
 
   if (!camera || !target) return;
 
@@ -17,7 +17,7 @@ watchEffect(() => {
     target,
   );
   const { init: blenderInit, destroy: blenderDestroy } =
-    useBlenderAnimation(ironmanRef);
+    useBlenderAnimation(markVIIRef);
 
   cameraInit();
   blenderInit();
@@ -33,5 +33,5 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Ironman ref="ironmanRef" />
+  <MarkVII ref="markVIIRef" />
 </template>

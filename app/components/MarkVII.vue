@@ -7,11 +7,11 @@ const MODEL_SIZE = 38_016_584;
 
 const { state, progress, isLoading } = useLoader(
   GLTFLoader,
-  "/models/mark7.glb",
+  "/models/markVII.glb",
 );
 
-const modelLoading = useState("mark7-loading", () => true);
-const modelProgress = useState("mark7-progress", () => 0);
+const modelLoading = useState("markVII-loading", () => true);
+const modelProgress = useState("markVII-progress", () => 0);
 
 watch(
   [isLoading, () => progress.loaded, () => progress.total],
@@ -24,7 +24,7 @@ watch(
     }
 
     // Если сервер не сообщает размер файла,
-    // используем известный размер модели
+    // использую известный размер модели
     const totalBytes = total > 0 ? total : MODEL_SIZE;
 
     const percentage = (loaded / totalBytes) * 100;
