@@ -1,75 +1,39 @@
-# Nuxt Minimal Starter
+IRON MAN — MARK VII
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<h3 align="center">The next evolution of armor technology.</h3>
 
-## Setup
+<p align="center">
+  An interactive 3D experience dedicated to Tony Stark's Mark VII armor from <i>Marvel's The Avengers (2012)</i>.
+</p>
 
-Make sure to install dependencies:
+<p align="center">
+  Explore the armor through cinematic camera movements, scroll-driven animations, and an immersive 3D presentation.
+</p>
 
-```bash
-# npm
-npm install
+Overview
 
-# pnpm
-pnpm install
+A personal 3D web project focused on bringing the Mark VII armor to life in the browser.
 
-# yarn
-yarn install
+The experience combines a custom 3D scene, baked animations created in Blender, and scroll-driven interactions to showcase the armor's design and details.
 
-# bun
-bun install
-```
+Technologies
 
-## Development Server
+<p>
+  <img src="https://img.shields.io/badge/Nuxt-00DC82?style=flat&logo=nuxt.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Three.js-000000?style=flat&logo=threedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/TresJS-000000?style=flat&logo=threedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=flat&logo=greensock&logoColor=white" />
+  <img src="https://img.shields.io/badge/Blender-E87D0D?style=flat&logo=blender&logoColor=white" />
+</p>
 
-Start the development server on `http://localhost:3000`:
+Credits
 
-```bash
-# npm
-npm run dev
+The 3D model and visual assets belong to their respective owners.
 
-# pnpm
-pnpm dev
+Iron Man and all related characters, designs, and trademarks are the property of Marvel and their respective rights holders.
 
-# yarn
-yarn dev
+This is an unofficial, non-commercial fan project created for educational and portfolio purposes.
 
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+<p align="center">
+  <i>Built with curiosity and a passion for 3D web experiences.</i>
+</p>
