@@ -3,6 +3,8 @@ import * as THREE from "three";
 import { useTresContext, type TresCamera } from "@tresjs/core";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
+const MODEL_SIZE = 38_016_584;
+
 const { state, progress, isLoading } = useLoader(
   GLTFLoader,
   "/models/mark7.glb",
@@ -12,8 +14,8 @@ const modelLoading = useState("mark7-loading", () => true);
 const modelProgress = useState("mark7-progress", () => 0);
 
 watch(
-  [isLoading, () => progress.percentage],
-  ([loading, value]) => {
+  [isLoading, () => progress.loaded, () => progress.total],
+  ([loading, loaded, total]) => {
     modelLoading.value = loading;
 
     if (!loading) {
@@ -21,8 +23,14 @@ watch(
       return;
     }
 
-    if (Number.isFinite(value)) {
-      modelProgress.value = THREE.MathUtils.clamp(value, 0, 100);
+    // Если сервер не сообщает размер файла,
+    // используем известный размер модели
+    const totalBytes = total > 0 ? total : MODEL_SIZE;
+
+    const percentage = (loaded / totalBytes) * 100;
+
+    if (Number.isFinite(percentage)) {
+      modelProgress.value = THREE.MathUtils.clamp(percentage, 0, 99);
     }
   },
   { immediate: true },
