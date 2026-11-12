@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import MarkVII from "./MarkVII.vue";
 import { Vector2 } from "three";
-import { GlitchMode } from "postprocessing";
 
 const markVIIRef = ref<InstanceType<typeof MarkVII> | null>(null);
 
@@ -32,10 +31,6 @@ onBeforeUnmount(() => {
   destroyCameraAnimation?.();
   destroyBlenderAnimation?.();
 });
-
-const glitchProps = {
-  mode: 2,
-};
 </script>
 
 <template>
