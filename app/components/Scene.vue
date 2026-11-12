@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import MarkVII from "./MarkVII.vue";
+import { Vector2 } from "three";
+import { GlitchMode } from "postprocessing";
 
 const markVIIRef = ref<InstanceType<typeof MarkVII> | null>(null);
 
@@ -30,8 +32,19 @@ onBeforeUnmount(() => {
   destroyCameraAnimation?.();
   destroyBlenderAnimation?.();
 });
+
+const glitchProps = {
+  mode: 2,
+};
 </script>
 
 <template>
   <MarkVII ref="markVIIRef" />
+
+  <Suspense v-if="markVIIRef?.getCamera()">
+    <EffectComposerPmndrs>
+      <VignettePmndrs :darkness="0.8" :offset="0.6" />
+      <GlitchPmndrs :delay="new Vector2(5, 10)" />
+    </EffectComposerPmndrs>
+  </Suspense>
 </template>
